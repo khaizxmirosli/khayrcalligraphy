@@ -1,0 +1,912 @@
+/* ===================================================
+   KHAYRCALLIGRAPHY PREMIUM WEBSITE
+   PART 1
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f7f7;
+    color:#000000;
+    transition:.4s;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    box-shadow:0 2px 20px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.navbar{
+
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:#000000;
+
+}
+
+.nav-links{
+
+    list-style:none;
+
+    display:flex;
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    color:#222;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#C9A227;
+
+}
+
+#darkModeBtn{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#C9A227;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#darkModeBtn:hover{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:140px auto 80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-text h1{
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.hero-text p{
+
+    font-size:18px;
+
+    color:#ffffff;
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+
+}
+
+.hero-btn{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn{
+
+    background:#C9A227;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.btn2{
+
+    background:#222;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn2:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.hero-image{
+
+    flex:1;
+
+}
+
+.hero-image img{
+
+    border-radius:25px;
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:80px 0;
+
+}
+
+.gallery h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+/* ==========================
+   PRODUCT CARD
+========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:contain;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:10px;
+
+}
+
+.card h3{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    color:#000;
+
+    font-weight:700;
+
+}
+
+.card p{
+
+    color:#C9A227;
+
+    font-size:20px;
+
+    margin:10px 0 20px;
+
+    font-weight:600;
+
+}
+
+.card button{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:40px;
+
+    background:#C9A227;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    background:#222;
+
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+
+    width:100%;
+    background:rgb(255, 255, 255);
+    padding:100px 20px;
+    text-align:center;
+
+}
+
+.about h2{
+
+    font-size:42px;
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    max-width:850px;
+    margin:auto;
+    color:#0f0b0b;
+    line-height:1.9;
+    font-size:18px;
+
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact{
+
+    width:100%;
+    padding:100px 20px;
+    text-align:center;
+    background:#f7f7f7;
+
+}
+
+.contact h2{
+
+    font-size:42px;
+    margin-bottom:25px;
+
+}
+
+.contact p{
+
+    font-size:18px;
+    color:#000000;
+    margin:12px 0;
+
+}
+
+.social{
+
+    margin-top:35px;
+
+}
+
+.social a{
+
+    width:55px;
+    height:55px;
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 10px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#222;
+
+    font-size:24px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    background:#C9A227;
+    color:white;
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+    font-size:15px;
+
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+/* ==========================
+   DARK MODE
+========================== */
+
+.dark .about h2,
+.dark .contact h2{
+    color: #fff;
+}
+
+.dark{
+
+    background:#121212;
+    color:white;
+
+}
+
+.dark header{
+
+    background:#1d1d1d;
+
+}
+
+.dark .logo{
+
+    color:white;
+
+}
+
+.dark .nav-links a{
+
+    color:white;
+
+}
+
+.dark .hero-text p{
+
+    color:#ddd;
+
+}
+
+.dark .gallery{
+
+    background:#121212;
+
+}
+
+.dark .card{
+
+    background:#222;
+    color:white;
+
+}
+
+.dark .card p{
+
+    color:#FFD56A;
+
+}
+
+.dark .about{
+
+    background:#1b1b1b;
+
+}
+
+.dark .about p{
+
+    color:#ddd;
+
+}
+
+.dark .contact{
+
+    background:#121212;
+
+}
+
+.dark .contact p{
+
+    color:#ddd;
+
+}
+
+.dark .social a{
+
+    background:#222;
+    color:white;
+
+}
+
+.dark footer{
+
+    background:black;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#efefef;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#C9A227;
+    border-radius:20px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1000px){
+
+.hero{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+.hero-btn{
+
+    justify-content:center;
+
+}
+
+.hero-text h1{
+
+    font-size:44px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-links{
+
+    display:none;
+
+}
+
+.hero{
+
+    margin-top:120px;
+
+}
+
+.hero-text h1{
+
+    font-size:34px;
+
+}
+
+.hero-text p{
+
+    font-size:16px;
+
+}
+
+.hero-btn{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.btn,
+.btn2{
+
+    width:220px;
+    text-align:center;
+
+}
+
+.gallery h2,
+.about h2,
+.contact h2{
+
+    font-size:32px;
+
+}
+
+.card img{
+
+    height:360px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.card img{
+
+    height:300px;
+
+}
+
+.hero-text h1{
+
+    font-size:28px;
+
+}
+
+.hero-text p{
+
+    font-size:15px;
+
+}
+
+}
+
+/* ==========================
+   IMAGE ZOOM
+========================== */
+
+.zoom-image{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.zoom-image:hover{
+    transform:scale(1.03);
+}
+
+#lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.92);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+
+    box-shadow:0 0 40px rgba(0, 0, 0, 0.25);
+
+}
+
+#close{
+
+    position:absolute;
+
+    top:25px;
+    right:40px;
+
+    font-size:50px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* ===== Dropdown Navbar ===== */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:45px;
+    left:0;
+    background:#fff;
+    min-width:220px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    border-radius:10px;
+    overflow:hidden;
+    z-index:999;
+}
+
+.dropdown-content li{
+    list-style:none;
+}
+
+.dropdown-content li a{
+
+    display:block;
+    padding:15px 20px;
+    color:#000;   /* Hitam */
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+
+}
+
+
+.dropdown-content li a:hover{
+    background:#C9A227;
+    color:white;
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    font-size:30px;
+    font-weight:700;
+
+}
+
+.logo img{
+
+    width:55px;
+    height:55px;
+    object-fit:contain;
+
+}
+
+.logo .gold{
+
+    color:#C9A227;
+
+}
+
+page aidilfitri
+
+.price{
+    color:#C9A227;
+    font-size:22px;
+    font-weight:700;
+    margin:10px 0;
+}
+
+.detail{
+    color:#110e0e;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.button-group{
+    display:flex;
+    gap:10px;
+}
+
+.button-group button,
+.order-btn{
+
+    flex:1;
+
+    text-align:center;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#C9A227;
+
+    transition:.3s;
+
+}
+
+.order-btn{
+    background:#222;
+}
+
+.button-group button:hover,
+.order-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+body{
+
+    background-image: url("images/aidilfitri2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    color:#f1ecec;
+
+    transition:.4s;
+
+}
+/* Tajuk semua section */
+.about h2,
+.contact h2{
+    color:#000;
+    font-weight:700;
+}
+
+
