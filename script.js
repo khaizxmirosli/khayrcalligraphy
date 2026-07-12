@@ -115,18 +115,25 @@ lightbox.onclick=(e)=>{
     }
 
 }
+// ================================
+// Mobile Menu
+// ================================
 
-const menu = document.getElementById("galleryMenu");
-const dropdown = document.getElementById("galleryDropdown");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-menu.addEventListener("click", function(e) {
-    e.preventDefault();
-    dropdown.style.display =
-        dropdown.style.display === "block" ? "none" : "block";
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
 });
 
-document.addEventListener("click", function(e) {
-    if (!menu.parentElement.contains(e.target)) {
-        dropdown.style.display = "none";
-    }
+// ================================
+// Gallery Dropdown
+// ================================
+
+const galleryBtn = document.getElementById("galleryBtn");
+const galleryMenu = document.getElementById("galleryMenu");
+
+galleryBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    galleryMenu.classList.toggle("show");
 });

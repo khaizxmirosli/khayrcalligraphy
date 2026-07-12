@@ -29,37 +29,46 @@
         <nav class="navbar">
 
             <div class="logo">
-
-                <img src="images/logo.jpg" alt="KhayrCalligraphy Logo">
-            
-                <span>Khayr<span class="gold">Calligraphy</span></span>
-            
+                <img src="images/logo.jpg" class="logo-img">
+                <span class="black">Khayr</span><span class="gold">Calligraphy</span>
             </div>
-
-            <ul class="nav-links">
+        
+            <ul class="nav-links" id="navMenu">
+        
                 <li><a href="#">Home</a></li>
+        
                 <li class="dropdown">
-                    <a href="#" id="galleryMenu">
+
+                    <a href="javascript:void(0)" id="galleryBtn">
                         Gallery <i class="fa-solid fa-chevron-down"></i>
                     </a>
                 
-                    <ul class="dropdown-content" id="galleryDropdown">
+                    <ul class="dropdown-content" id="galleryMenu">
                         <li><a href="wedding.html">Wedding</a></li>
                         <li><a href="engagement.html">Engagement</a></li>
                         <li><a href="aqiqah.html">Aqiqah</a></li>
                         <li><a href="birthday.html">Birthday</a></li>
-                        <li><a href="Aidilftri.html">Aidilfitri</a></li>
+                        <li><a href="family.html">Family</a></li>
                         <li><a href="custom.html">Custom Design</a></li>
                     </ul>
+                
                 </li>
                 <li><a href="#about">About</a></li>
+        
                 <li><a href="#contact">Contact</a></li>
+        
             </ul>
-
-            <button id="darkModeBtn">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-
+        
+            <div class="right-menu">
+        
+                <button id="darkModeBtn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+        
+                <i class="fa-solid fa-bars menu-toggle" id="menuToggle"></i>
+        
+            </div>
+        
         </nav>
     </header>
 
