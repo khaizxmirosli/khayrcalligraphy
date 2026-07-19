@@ -1,22 +1,4 @@
-// ================================
-// Dark Mode
-// ================================
 
-const darkModeBtn = document.getElementById("darkModeBtn");
-
-darkModeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    const icon = darkModeBtn.querySelector("i");
-
-    if (document.body.classList.contains("dark")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-    }
-});
 
 // ================================
 // Scroll Animation
@@ -119,13 +101,6 @@ lightbox.onclick=(e)=>{
 // Mobile Menu
 // ================================
 
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
 // ================================
 // Gallery Dropdown
 // ================================
@@ -137,3 +112,68 @@ galleryBtn.addEventListener("click", function(e) {
     e.preventDefault();
     galleryMenu.classList.toggle("show");
 });
+document.addEventListener("click", function(e){
+
+    if(!galleryBtn.contains(e.target) && !galleryMenu.contains(e.target)){
+        galleryMenu.classList.remove("show");
+    }
+
+});
+
+const popup=document.getElementById("productPopup");
+
+const popupImage=document.getElementById("popupImage");
+
+const popupTitle=document.getElementById("popupTitle");
+
+const popupPrice=document.getElementById("popupPrice");
+
+const popupDetail=document.getElementById("popupDetail");
+
+const popupOrder=document.getElementById("popupOrder");
+
+document.querySelectorAll(".viewBtn").forEach(button=>{
+
+button.onclick=function(){
+
+popup.style.display="flex";
+
+popupImage.src=this.dataset.image;
+
+popupTitle.innerHTML=this.dataset.name;
+
+popupPrice.innerHTML=this.dataset.price;
+
+popupDetail.innerHTML=this.dataset.detail;
+
+const message=`Hello Khayr Calligraphy,
+
+I would like to order:
+
+Product : ${this.dataset.name}
+
+Price : ${this.dataset.price}
+
+Thank you.`;
+
+popupOrder.href="https://wa.me/601125764580?text="+encodeURIComponent(message);
+
+}
+
+});
+
+document.querySelector(".close-popup").onclick=function(){
+
+popup.style.display="none";
+
+}
+
+window.onclick=function(e){
+
+if(e.target==popup){
+
+popup.style.display="none";
+
+}
+
+}

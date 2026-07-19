@@ -22,6 +22,30 @@
     <img id="lightbox-img">
 </div>
 
+<!-- PRODUCT POPUP -->
+
+<div id="productPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close-popup">&times;</span>
+
+        <img id="popupImage">
+
+        <h2 id="popupTitle"></h2>
+
+        <h3 id="popupPrice"></h3>
+
+        <p id="popupDetail"></p>
+
+        <a id="popupOrder" class="btn2" target="_blank">
+            Order Now
+        </a>
+
+    </div>
+
+</div>
+
 <body>
 
     <!-- Navigation -->
@@ -44,12 +68,12 @@
                     </a>
                 
                     <ul class="dropdown-content" id="galleryMenu">
-                        <li><a href="wedding.html">Wedding</a></li>
-                        <li><a href="engagement.html">Engagement</a></li>
-                        <li><a href="aqiqah.html">Aqiqah</a></li>
-                        <li><a href="birthday.html">Birthday</a></li>
-                        <li><a href="family.html">Family</a></li>
-                        <li><a href="custom.html">Custom Design</a></li>
+                        <li><a href="Aidilftri.html">Kain Rentang</a></li>
+                        <li><a href="engagement.html">Coming Soon</a></li>
+                        <li><a href="aqiqah.html">Coming Soon</a></li>
+                        <li><a href="birthday.html">Coming Soon</a></li>
+                        <li><a href="family.html">Coming Soon</a></li>
+                        
                     </ul>
                 
                 </li>
@@ -61,11 +85,9 @@
         
             <div class="right-menu">
         
-                <button id="darkModeBtn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-        
-                <i class="fa-solid fa-bars menu-toggle" id="menuToggle"></i>
+              
+                <div class="right-menu">
+                </div>
         
             </div>
         
@@ -98,12 +120,7 @@
 
         </div>
 
-        <div class="hero-image">
-
-            <img src="images/banner.jpg" alt="Banner">
-
-        </div>
-
+     
     </section>
 
     <!-- Gallery -->
@@ -111,6 +128,7 @@
     <section class="gallery" id="gallery">
 
         <h2>Kain Rentang</h2>
+        <p class="gallery-subtitle"> • Cotton Series •</p>
         
 
         <div class="cards">
@@ -120,7 +138,22 @@
                 <img src="images/wedding.jpg" class="zoom-image">
                 <h3>Wedding</h3>
                 <p>RM100</p>
-                <button>View</button>
+                <button
+                class="viewBtn"
+                
+                data-name="Wedding Banner"
+                
+                data-price="RM100"
+                
+                data-image="images/wedding.jpg"
+                
+                data-detail="Size : 6ft × 3ft (180cm × 90cm)<br>
+                Material : Premium Cotton Linen<br>
+                Acrylic Paint">
+                
+                View
+                
+                </button>
             </div>
         
             <!-- Produk 2 -->
@@ -128,7 +161,22 @@
                 <img src="images/engagement.jpg" class="zoom-image">
                 <h3>Engagement</h3>
                 <p>RM90</p>
-                <button>View</button>
+                <button
+                class="viewBtn"
+
+                data-name="Wedding Banner"
+
+                data-price="RM100"
+
+                data-image="images/wedding.jpg"
+
+                data-detail="Size : 6ft × 3ft (180cm × 90cm)<br>
+                Material : Premium Cotton Linen<br>
+                Acrylic Paint">
+
+                View
+
+                </button>
             </div>
         
             <!-- Produk 3 -->
@@ -136,10 +184,104 @@
                 <img src="images/aqiqah.jpg" class="zoom-image">
                 <h3>Aqiqah</h3>
                 <p>RM100</p>
-                <button>View</button>
+                <button
+                class="viewBtn"
+                
+                data-name="Wedding Banner"
+                
+                data-price="RM100"
+                
+                data-image="images/aqiqah.jpg"
+                
+                data-detail="Size : 6ft × 3ft (180cm × 90cm)<br>
+                Material : Premium Cotton Linen<br>
+                Acrylic Paint">
+                
+                View
+                
+                </button>
             </div>
 
     </section>
+
+    <section class="gallery" id="gallery">
+        <p class="gallery-subtitle"> • Satin Series •</p>
+        
+
+        <div class="cards">
+
+            <!-- Produk 1 -->
+            <div class="card">
+                <img src="images/coming soon.png" class="zoom-image">
+                <h3>Coming Soon</h3>
+                <p>-</p>
+                <button
+                class="viewBtn"
+                
+                data-name="Wedding Banner"
+                
+                data-price="-"
+                
+                data-image="images/coming soon.png"
+                
+                data-detail="<br>
+                <br>
+                ">
+                
+                View
+                
+                </button>
+            </div>
+        
+            <!-- Produk 2 -->
+            <div class="card">
+                <img src="images/coming soon.png" class="zoom-image">
+                <h3>Coming Soon</h3>
+                <p>-</p>
+                <button
+                class="viewBtn"
+                
+                data-name="Wedding Banner"
+                
+                data-price="-"
+                
+                data-image="images/coming soon.png"
+                
+                data-detail="<br>
+                <br>
+                ">
+                
+                View
+                
+                </button>
+            </div>
+        
+            <!-- Produk 3 -->
+            <div class="card">
+                <img src="images/coming soon.png" class="zoom-image">
+                <h3>Coming Soon</h3>
+                <p>-</p>
+                <button
+                class="viewBtn"
+                
+                data-name="Wedding Banner"
+                
+                data-price="-"
+                
+                data-image="images/coming soon.png"
+                
+                data-detail="<br>
+                <br>
+                ">
+                
+                View
+                
+                </button>
+            </div>
+
+    </section>
+
+    
 
     <!-- About -->
     <section class="about" id="about">
@@ -161,7 +303,7 @@
 
         <p>Email : info@khayrcalligraphy.com</p>
 
-        <p>WhatsApp : +60 12-3456789</p>
+        <p>WhatsApp : +60 11-25764580</p>
 
         <div class="social">
 
