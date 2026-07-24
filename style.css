@@ -260,3 +260,87 @@ header{background:#fff}.navbar{max-width:1080px;margin:auto;padding:14px 28px 0;
 }
 
 }
+
+header {
+    position: sticky; /* atau fixed */
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar {
+    position: relative;
+    z-index: 9999;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    display: none;
+    z-index: 10000; /* paling depan */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.nested-dropdown {
+    position: relative;
+}
+
+.nested-dropdown-content {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    min-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    display: none;
+    z-index: 10001;
+}
+
+.nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+}
+
+header {
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+
+    header{
+        z-index:9999;
+    }
+
+    .navbar{
+        position:relative;
+        z-index:9999;
+        overflow:visible;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#fff;
+        z-index:10000;
+    }
+
+    .dropdown-content,
+    .nested-dropdown-content{
+        position:relative;
+        left:0;
+        top:0;
+        width:100%;
+        z-index:10001;
+    }
+}
