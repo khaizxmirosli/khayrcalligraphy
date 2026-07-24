@@ -1,334 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KhayrCalligraphy</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-        <link rel="icon" type="image/png" href="images/logo.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khayr Calligraphy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/logo.jpg">
 </head>
-
-<div id="lightbox">
-    <span id="close">&times;</span>
-    <img id="lightbox-img">
-</div>
-
-<!-- PRODUCT POPUP -->
-
-<div id="productPopup" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close-popup">&times;</span>
-
-        <img id="popupImage">
-
-        <h2 id="popupTitle"></h2>
-
-        <h3 id="popupPrice"></h3>
-
-        <p id="popupDetail"></p>
-
-        <a id="popupOrder" class="btn2" target="_blank">
-            Order Now
-        </a>
-
-    </div>
-
-</div>
-
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
+  <div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" alt="Preview artwork">
+  </div>
 
-            <div class="logo">
-                <img src="images/logo.jpg" class="logo-img">
-                <span class="black">Khayr</span><span class="gold">Calligraphy</span>
-            </div>
-        
-            <ul class="nav-links" id="navMenu">
-        
-                <li><a href="#">Home</a></li>
-        
-                <li class="dropdown">
+  <div id="productPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <img id="popupImage" alt="Product image">
+      <h2 id="popupTitle"></h2>
+      <h3 id="popupPrice"></h3>
+      <p id="popupDetail"></p>
+      <a id="popupOrder" class="btn2" target="_blank" rel="noopener">Order Now</a>
+    </div>
+  </div>
 
-                    <a href="javascript:void(0)" id="galleryBtn">
-                        Gallery <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                
-                    <ul class="dropdown-content" id="galleryMenu">
-                        <li><a href="Aidilftri.html">Kain Rentang</a></li>
-                        <li><a href="engagement.html">Coming Soon</a></li>
-                        <li><a href="aqiqah.html">Coming Soon</a></li>
-                        <li><a href="birthday.html">Coming Soon</a></li>
-                        <li><a href="family.html">Coming Soon</a></li>
-                        
-                    </ul>
-                
-                </li>
-                <li><a href="#about">About</a></li>
-        
-                <li><a href="#contact">Contact</a></li>
-        
-            </ul>
-        
-            <div class="right-menu">
-        
-              
-                <div class="right-menu">
-                </div>
-        
-            </div>
-        
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="#home" aria-label="Khayr Calligraphy home">
+        <img src="images/logo.jpg" class="logo-img" alt="Khayr Calligraphy logo">
+        <span class="black">Khayr</span><span class="gold">Calligraphy</span>
+      </a>
 
-    <!-- Hero -->
-    <section class="hero">
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" id="galleryBtn">Gallery <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-content" id="galleryMenu">
+            <li class="nested-dropdown">
+              <a href="javascript:void(0)" id="cottonBtn">Cotton Series <i class="fa-solid fa-chevron-right"></i></a>
+              <ul class="nested-dropdown-content" id="cottonMenu">
+                <li><a href="aqiqah.html">Aqiqah</a></li>
+                <li><a href="Aidilftri.html">Aidilfitri</a></li>
+              </ul>
+            </li>
+            <li><a href="#satin">Satin Series</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="right-menu"></div>
+    </nav>
+  </header>
 
-        <div class="hero-text">
-
-            <h1>Premium Islamic Calligraphy</h1>
-
-            <p>
-                Beautiful handmade calligraphy artwork
-                for your home, office, events and special gifts.
-            </p>
-
-            <div class="hero-btn">
-
-                <a href="#gallery" class="btn">
-                    View Collection
-                </a>
-
-                <a href="https://wa.me/601125764580" class="btn2">
-                    WhatsApp
-                </a>
-
-            </div>
-
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Premium Islamic Calligraphy</h1>
+        <p>Beautiful handmade calligraphy artwork for your home, office, events and special gifts.</p>
+        <div class="hero-btn">
+          <a href="#cotton" class="btn">View Collection</a>
+          <a href="https://wa.me/601125764580" class="btn2" target="_blank" rel="noopener">WhatsApp</a>
         </div>
-
-     
+      </div>
+      <div class="hero-image">
+        <img src="images/banner.jpg" alt="Khayr Calligraphy artwork">
+      </div>
     </section>
 
-    <!-- Gallery -->
-     
-    <section class="gallery" id="gallery">
-
-        <h2>Kain Rentang</h2>
-        <p class="gallery-subtitle"> • Cotton Series •</p>
-        
-
-        <div class="cards">
-
-            <!-- Produk 1 -->
-            <div class="card">
-                <img src="images/wedding.jpg" class="zoom-image">
-                <h3>Wedding</h3>
-                <p>RM100</p>
-                <button
-                class="viewBtn"
-                
-                data-name="Wedding Banner"
-                
-                data-price="RM100"
-                
-                data-image="images/wedding.jpg"
-                
-                data-detail="Size : 6ft × 3ft (180cm × 90cm)<br>
-                Material : Premium Cotton Linen<br>
-                Acrylic Paint">
-                
-                View
-                
-                </button>
-            </div>
-        
-            <!-- Produk 2 -->
-            <div class="card">
-                <img src="images/engagement.jpg" class="zoom-image">
-                <h3>Engagement</h3>
-                <p>RM90</p>
-                <button
-                class="viewBtn"
-
-                data-name="Wedding Banner"
-
-                data-price="RM100"
-
-                data-image="images/wedding.jpg"
-
-                data-detail="Size : 6ft × 3ft (180cm × 90cm)<br>
-                Material : Premium Cotton Linen<br>
-                Acrylic Paint">
-
-                View
-
-                </button>
-            </div>
-        
-            <!-- Produk 3 -->
-            <div class="card">
-                <img src="images/aqiqah.jpg" class="zoom-image">
-                <h3>Aqiqah</h3>
-                <p>RM100</p>
-                <button
-                class="viewBtn"
-                
-                data-name="Wedding Banner"
-                
-                data-price="RM100"
-                
-                data-image="images/aqiqah.jpg"
-                
-                data-detail="Size : 6ft × 3ft (180cm × 90cm)<br>
-                Material : Premium Cotton Linen<br>
-                Acrylic Paint">
-                
-                View
-                
-                </button>
-            </div>
-
+    <section class="gallery" id="cotton">
+      <h2>Kain Rentang</h2>
+      <p class="gallery-subtitle">• Cotton Series •</p>
+      <div class="cards">
+        <article class="card">
+          <img src="images/wedding.jpg" class="zoom-image" alt="Wedding banner">
+          <h3>Wedding</h3>
+          <p>RM100</p>
+          <button class="viewBtn" data-name="Wedding Banner" data-price="RM100" data-image="images/wedding.jpg" data-detail="Size: 6ft × 3ft (180cm × 90cm)&lt;br&gt;Material: Premium Cotton Linen&lt;br&gt;Acrylic Paint">View</button>
+        </article>
+        <article class="card">
+          <img src="images/engagement.jpg" class="zoom-image" alt="Engagement banner">
+          <h3>Engagement</h3>
+          <p>RM90</p>
+          <button class="viewBtn" data-name="Engagement Banner" data-price="RM90" data-image="images/engagement.jpg" data-detail="Size: 6ft × 3ft (180cm × 90cm)&lt;br&gt;Material: Premium Cotton Linen&lt;br&gt;Acrylic Paint">View</button>
+        </article>
+        <article class="card">
+          <img src="images/aqiqah.jpg" class="zoom-image" alt="Aqiqah banner">
+          <h3>Aqiqah</h3>
+          <p>RM100</p>
+          <button class="viewBtn" data-name="Aqiqah Banner" data-price="RM100" data-image="images/aqiqah.jpg" data-detail="Size: 6ft × 3ft (180cm × 90cm)&lt;br&gt;Material: Premium Cotton Linen&lt;br&gt;Acrylic Paint">View</button>
+        </article>
+      </div>
     </section>
 
-    <section class="gallery" id="gallery">
-        <p class="gallery-subtitle"> • Satin Series •</p>
-        
-
-        <div class="cards">
-
-            <!-- Produk 1 -->
-            <div class="card">
-                <img src="images/coming.jpg" class="zoom-image">
-                <h3>Coming Soon</h3>
-                <p>-</p>
-                <button
-                class="viewBtn"
-                
-                data-name="Wedding Banner"
-                
-                data-price="-"
-                
-                data-image="images/coming.jpg"
-                
-                data-detail="<br>
-                <br>
-                ">
-                
-                View
-                
-                </button>
-            </div>
-        
-            <!-- Produk 2 -->
-            <div class="card">
-                <img src="images/coming.jpg" class="zoom-image">
-                <h3>Coming Soon</h3>
-                <p>-</p>
-                <button
-                class="viewBtn"
-                
-                data-name="Wedding Banner"
-                
-                data-price="-"
-                
-                data-image="images/coming.jpg"
-                
-                data-detail="<br>
-                <br>
-                ">
-                
-                View
-                
-                </button>
-            </div>
-        
-            <!-- Produk 3 -->
-            <div class="card">
-                <img src="images/coming.jpg" class="zoom-image">
-                <h3>Coming Soon</h3>
-                <p>-</p>
-                <button
-                class="viewBtn"
-                
-                data-name="Wedding Banner"
-                
-                data-price="-"
-                
-                data-image="images/coming.jpg"
-                
-                data-detail="<br>
-                <br>
-                ">
-                
-                View
-                
-                </button>
-            </div>
-
+    <section class="gallery" id="satin">
+      <p class="gallery-subtitle">• Satin Series •</p>
+      <div class="cards">
+        <article class="card"><img src="images/coming.jpg" class="zoom-image" alt="Coming soon"><h3>Coming Soon</h3><p>—</p><button class="viewBtn" data-name="Coming Soon" data-price="—" data-image="images/coming.jpg" data-detail="New collection will be available soon.">View</button></article>
+        <article class="card"><img src="images/coming.jpg" class="zoom-image" alt="Coming soon"><h3>Coming Soon</h3><p>—</p><button class="viewBtn" data-name="Coming Soon" data-price="—" data-image="images/coming.jpg" data-detail="New collection will be available soon.">View</button></article>
+        <article class="card"><img src="images/coming.jpg" class="zoom-image" alt="Coming soon"><h3>Coming Soon</h3><p>—</p><button class="viewBtn" data-name="Coming Soon" data-price="—" data-image="images/coming.jpg" data-detail="New collection will be available soon.">View</button></article>
+      </div>
     </section>
 
-    
-
-    <!-- About -->
     <section class="about" id="about">
-
-        <h2>About Us</h2>
-
-        <p>
-            KhayrCalligraphy provides premium Islamic
-            calligraphy and custom artwork with elegant
-            designs suitable for every home and occasion.
-        </p>
-
+      <h2>About Us</h2>
+      <p>Khayr Calligraphy provides premium Islamic calligraphy and custom artwork with elegant designs suitable for every home and occasion.</p>
     </section>
 
-    <!-- Contact -->
     <section class="contact" id="contact">
-
-        <h2>Contact</h2>
-
-        <p>Email : info@khayrcalligraphy.com</p>
-
-        <p>WhatsApp : +60 11-25764580</p>
-
-        <div class="social">
-
-            <a href="#"><i class="fab fa-facebook"></i></a>
-
-            <a href="#"><i class="fab fa-instagram"></i></a>
-
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-
-        </div>
-
+      <h2>Contact</h2>
+      <p>Email: info@khayrcalligraphy.com</p>
+      <p>WhatsApp: +60 11-25764580</p>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-
-        © 2026 KhayrCalligraphy. All Rights Reserved.
-
-    </footer>
-
-    <script src="script.js"></script>
-
+  <footer>© 2026 Khayr Calligraphy. All Rights Reserved.</footer>
+  <script src="script.js"></script>
 </body>
-
-
 </html>

@@ -107,15 +107,32 @@ lightbox.onclick=(e)=>{
 
 const galleryBtn = document.getElementById("galleryBtn");
 const galleryMenu = document.getElementById("galleryMenu");
+const cottonBtn = document.getElementById("cottonBtn");
+const cottonMenu = document.getElementById("cottonMenu");
 
-galleryBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    galleryMenu.classList.toggle("show");
-});
+if (galleryBtn && galleryMenu) {
+    galleryBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        galleryMenu.classList.toggle("show");
+        if (!galleryMenu.classList.contains("show") && cottonMenu) {
+            cottonMenu.classList.remove("show");
+        }
+    });
+}
+
+if (cottonBtn && cottonMenu) {
+    cottonBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        cottonMenu.classList.toggle("show");
+    });
+}
+
 document.addEventListener("click", function(e){
 
-    if(!galleryBtn.contains(e.target) && !galleryMenu.contains(e.target)){
+    if(galleryBtn && galleryMenu && !galleryBtn.contains(e.target) && !galleryMenu.contains(e.target)){
         galleryMenu.classList.remove("show");
+        if (cottonMenu) cottonMenu.classList.remove("show");
     }
 
 });
