@@ -230,13 +230,4 @@ if (menuToggle && navMenu) {
 
 }
 
-document.querySelectorAll("#navMenu a").forEach(link => {
-
-    link.addEventListener("click", function(){
-
-        navMenu.classList.remove("active");
-
-    });
-
-});
 
