@@ -195,9 +195,48 @@ popup.style.display="none";
 
 }
 
+// ================================
+// Mobile Menu
+// ================================
+
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+if (menuToggle && navMenu) {
+
+    // Buka / Tutup menu
+    menuToggle.addEventListener("click", function(e){
+        e.stopPropagation();
+        navMenu.classList.toggle("active");
+    });
+
+    // Tutup menu bila tekan luar
+    document.addEventListener("click", function(e){
+
+        if(
+            !navMenu.contains(e.target) &&
+            !menuToggle.contains(e.target)
+        ){
+            navMenu.classList.remove("active");
+
+            // Tutup dropdown Gallery
+            if(galleryMenu) galleryMenu.classList.remove("show");
+
+            // Tutup submenu Cotton
+            if(cottonMenu) cottonMenu.classList.remove("show");
+        }
+
+    });
+
+}
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+
+    link.addEventListener("click", function(){
+
+        navMenu.classList.remove("active");
+
+    });
+
 });
+
