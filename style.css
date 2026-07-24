@@ -260,3 +260,71 @@ header{background:#fff}.navbar{max-width:1080px;margin:auto;padding:14px 28px 0;
 }
 
 }
+
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+/* Navbar */
+.navbar{
+    position: relative;
+    overflow: visible;
+}
+
+/* Navigation */
+.nav-links{
+    position: relative;
+    z-index: 99999;
+}
+
+/* Gallery Dropdown */
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: #fff;
+    min-width: 220px;
+    z-index: 999999;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+/* Show dropdown */
+.dropdown.active .dropdown-content,
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* Cotton Series submenu */
+.nested-dropdown{
+    position: relative;
+}
+
+.nested-dropdown-content{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    background: #fff;
+    min-width: 200px;
+    z-index: 999999;
+}
+
+.nested-dropdown.active .nested-dropdown-content,
+.nested-dropdown:hover .nested-dropdown-content{
+    display: block;
+}
+
+.hero,
+main{
+    overflow: visible;
+}
