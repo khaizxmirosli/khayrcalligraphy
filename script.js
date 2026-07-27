@@ -230,30 +230,10 @@ if (menuToggle && navMenu) {
 
 }
 
-const loader = document.querySelector(".loader");
+
 
 // Bila tekan link ke page lain
-document.querySelectorAll("a").forEach(link => {
 
-    link.addEventListener("click", function(e){
-
-        const url = this.getAttribute("href");
-
-        if(url && url.includes(".html")) {
-
-            e.preventDefault();
-
-            loader.classList.add("active");
-
-            setTimeout(() => {
-                window.location.href = url;
-            }, 800);
-
-        }
-
-    });
-
-});
 
 document.querySelectorAll(".viewBtn").forEach(btn => {
 
