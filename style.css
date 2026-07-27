@@ -16,7 +16,7 @@ header{background:#fff}.navbar{max-width:1080px;margin:auto;padding:14px 28px 0;
 
 .hero{max-width:1010px;margin:35px auto 55px;padding:0 28px;min-height:310px;display:flex;align-items:center;gap:58px}.hero-text{flex:1}.hero-text h1{font-family:'DM Serif Display',serif;text-transform:uppercase;font-size:38px;letter-spacing:.5px;line-height:1.08;margin-bottom:15px}.hero-text p{max-width:430px;font-size:14px;color:#6a6867;line-height:1.85;margin-bottom:25px}.hero-btn{display:flex;gap:10px}.btn,.btn2{display:inline-block;padding:12px 20px;font-size:11px;letter-spacing:1px;font-weight:700;transition:.2s}.btn{background:var(--gold);color:#fff}.btn2{border:1px solid #b5b1ae;color:#575452}.btn:hover,.btn2:hover{transform:translateY(-2px);box-shadow:0 7px 16px #0000001a}.hero-image{flex:1;max-width:405px}.hero-image img{width:100%;height:290px;object-fit:cover}
 
-.gallery{max-width:1010px;margin:auto;padding:43px 28px}.gallery h2{text-align:center;font-family:'DM Serif Display',serif;font-size:26px;text-transform:uppercase;letter-spacing:1.1px;margin-bottom:4px}.gallery-subtitle{text-align:center;margin:0 0 22px;color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff}.card img{width:100%;height:286px;object-fit:cover;transition:opacity .25s,transform .25s}.card img:hover{opacity:.88;transform:scale(1.01)}.card h3{margin-top:12px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}.card p{margin:4px 0 10px;color:#8d8a88;font-size:10px}.card button{border:1px solid #c8c4c0;background:white;color:#555;padding:8px 13px;text-transform:uppercase;font-family:inherit;font-size:9px;letter-spacing:1px;font-weight:700;cursor:pointer;transition:.2s}.card button:hover{background:var(--gold);border-color:var(--gold);color:white}
+.gallery{max-width:1010px;margin:auto;padding:43px 28px}.gallery h2{text-align:center;font-family:'DM Serif Display',serif;font-size:26px;text-transform:uppercase;letter-spacing:1.1px;margin-bottom:4px}.gallery-subtitle{text-align:center;margin:0 0 22px;color:var(--gold);font-size:15px;letter-spacing:3px;text-transform:uppercase}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff}.card img{width:100%;height:286px;object-fit:cover;transition:opacity .25s,transform .25s}.card img:hover{opacity:.88;transform:scale(1.01)}.card h3{margin-top:12px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}.card p{margin:4px 0 10px;color:#8d8a88;font-size:10px}.card button{border:1px solid #c8c4c0;background:white;color:#555;padding:8px 13px;text-transform:uppercase;font-family:inherit;font-size:9px;letter-spacing:1px;font-weight:700;cursor:pointer;transition:.2s}.card button:hover{background:var(--gold);border-color:var(--gold);color:white}
 
 .about{margin-top:30px;padding:65px 20px;background:#faf9f7;text-align:center}.about h2,.contact h2{font-family:'DM Serif Display',serif;font-size:28px;text-transform:uppercase;letter-spacing:1px;margin-bottom:13px}.about p{margin:auto;max-width:650px;color:#6e6b68;line-height:1.9}.contact{text-align:center;padding:58px 20px}.contact p{margin:5px;color:#6e6b68}.social{margin-top:22px;display:flex;justify-content:center;gap:12px}.social a{width:35px;height:35px;border:1px solid var(--line);display:grid;place-items:center;color:#555;font-size:14px}.social a:hover{background:var(--gold);border-color:var(--gold);color:white}footer{padding:21px;background:#3f3c39;color:#fff;text-align:center;font-size:11px;letter-spacing:.4px}
 
@@ -445,4 +445,176 @@ main{
     display:block;
 }
 
+}
+
+    /* ================= untuk wedding ================= */
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:999999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:85vh;
+    object-fit:contain;
+    border-radius:15px;
+}
+
+.lightbox:target{
+    display:flex;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:45px;
+    color:white;
+    text-decoration:none;
+    z-index:1000000;
+}
+
+ /* ================= untuk aqiaqah ================= */
+ .lightbox{
+    display:none;
+    position:fixed;
+    z-index:999999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:85vh;
+    object-fit:contain;
+}
+
+.lightbox:target{
+    display:flex;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:45px;
+}
+
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+   }
+   
+   .loader:before, .loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+   }
+   
+   .loader:before {
+    animation: before8 2s infinite;
+   }
+   
+   .loader:after {
+    animation: after6 2s infinite;
+   }
+   
+   @keyframes before8 {
+    0% {
+     width: 0.5em;
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    35% {
+     width: 2.5em;
+     box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    70% {
+     width: 0.5em;
+     box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    100% {
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   }
+   
+   @keyframes after6 {
+    0% {
+     height: 0.5em;
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   
+    35% {
+     height: 2.5em;
+     box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+   
+    70% {
+     height: 0.5em;
+     box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+   
+    100% {
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   }
+   
+   .loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+   }
+
+   .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+/* aktif bila nak keluar page */
+.loader.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* kekalkan animasi asal anda */
+.loader::before,
+.loader::after {
+    position: absolute;
 }
