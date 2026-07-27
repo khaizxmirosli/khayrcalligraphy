@@ -255,4 +255,50 @@ document.querySelectorAll("a").forEach(link => {
 
 });
 
+document.querySelectorAll(".viewBtn").forEach(btn => {
+
+    btn.addEventListener("click", function(){
+
+        let name = this.dataset.name;
+        let price = this.dataset.price;
+        let image = this.dataset.image;
+        let detail = this.dataset.detail;
+
+
+        document.getElementById("popupImage").src = image;
+        document.getElementById("popupTitle").innerHTML = name;
+        document.getElementById("popupPrice").innerHTML = price;
+        document.getElementById("popupDetail").innerHTML = detail;
+
+
+        let message = 
+`Assalamualaikum. Saya berminat untuk menempah banner berikut:
+
+🖼️ Kod Produk: ${name}
+💰 Harga: ${price}
+
+📏 Detail:
+${detail.replaceAll("<br>","\n")}
+
+🖼️ Gambar:
+https://khayrcalligraphy.vercel.app/${image}
+
+Terima kasih.`;
+
+
+        document.getElementById("popupOrder").href =
+        `https://wa.me/601125764580?text=${encodeURIComponent(message)}`;
+
+
+        document.getElementById("productPopup").style.display="flex";
+
+    });
+
+});
+
+
+// Tutup popup
+document.querySelector(".close-popup").onclick = function(){
+    document.getElementById("productPopup").style.display="none";
+};
 
